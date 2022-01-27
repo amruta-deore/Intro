@@ -1,0 +1,20 @@
+version: "1"
+project:
+  name: JV
+  branch: JV
+  revision:
+    name: rev1
+    date: "2021-12-15T09:35:22Z"
+capture:
+  build:
+    buildCommands:
+    - shell: [ant, clean, compile]
+    coverity:
+        skipFiles:
+        - ".java"
+analyze:
+  mode: central
+install:
+  coverity:
+    version: 2021.06-1
+serverUrl: https://sipse.polaris.synopsys.com
